@@ -31,8 +31,20 @@ def get_text_messages(message):
         btn7 = types.KeyboardButton ('11 Класс')
         btn8 = types.KeyboardButton ('Назад')
         markup.add(btn3,btn4,btn5,btn6,btn7,btn8)
-        bot.send_message(message.from_user.id, 'В каком вы классе?', reply_markup=markup) 
-        
+        bot.send_message(message.from_user.id, 'В каком вы классе?', reply_markup=markup)
+    if message.text == '7 Класс':
+        bot.send_message(message.from_user.id, 'Презентация 1', reply_markup=markup)
+
+    if message.text == 'Назад':
+       
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True) 
+        btn1 = types.KeyboardButton('Показать презентации')
+        btn2 = types.KeyboardButton('Помощь!')
+        markup.add(btn1, btn2)
+        bot.send_message(message.from_user.id, '❓ Задайте интересующий вас вопрос', reply_markup=markup)
+    if message.text == '7 класс':
+        bot.send_message(message.from_user.id, 'Презентация 1', reply_markup=markup)
+
     elif message.text == 'Помощь':
         bot.send_message(message.from_user.id, 'Вы всегда можете обратиться в нашу тех.поддержку, которая всегда будет рада вам помочь! https://t.me/fuckinglazydream или @fuckinglazydream', reply_markup=markup)
 
