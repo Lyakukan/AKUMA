@@ -1,8 +1,8 @@
 import telebot
 from telebot import types
 
-# Создал бота для проверки https://t.me/Fackamakaka_bot
-bot = telebot.TeleBot('7786664713:AAGTsLgHKhf7eaeBV8Ymd2caY3PWxQlhoXc')
+
+bot = telebot.TeleBot('')
 
 
 @bot.message_handler(commands=['start'])
